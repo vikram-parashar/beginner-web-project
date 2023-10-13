@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #252525;
+    height: 100vh;
+    overflow: hidden;
+}
+
+span{
+    position: absolute;
+    bottom: -15vh;
+    border-radius:50%;
+    width: 100px;
+    height: 100px;
+    display: block;
+    animation: fly linear;
+    background-color:transparent;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+span span{
+    display: block;
+    width: 20%;
+    height: 20%;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    position: relative;
+    top: 20%;
+    left: 25%;
+}
+@keyframes fly{ 
+   100%{
+       bottom: 110vh;
+   }
+}

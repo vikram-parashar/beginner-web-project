@@ -1,0 +1,73 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(50, 50, 50);
+}
+div{
+    text-transform: uppercase;
+    background-color: rgb(50, 50, 50);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-size: 16.6vmax;
+    color: white;
+    border-radius: 50%;
+    animation: rotate 4s infinite linear;
+    box-shadow: 0 0 150px inset black;
+    animation-delay: .5s;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(-20deg);
+    }
+    70%{
+        transform: rotate(360deg);
+    }
+    80%{
+        transform: rotate(380deg);
+    }
+    90%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+div:nth-child(2){
+    width: 95vmax;
+    height: 95vmax;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+div:nth-child(3){
+    width: 80vmax;
+    height: 80vmax;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+div:nth-child(4){
+    width: 65vmax;
+    height: 65vmax;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275));
+}
+div:nth-child(5){
+    width: 50vmax;
+    height: 50vmax;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+div:nth-child(6){
+    width: 35vmax;
+    height: 35vmax;
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+div:nth-child(7){
+    width: 20vmax;
+    height: 20vmax;
+    animation-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+}

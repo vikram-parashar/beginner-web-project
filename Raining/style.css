@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    overflow: hidden;
+}
+span{
+    height: 50px;
+    width: 2px;
+    background-color:skyblue;
+    display: block;
+    animation: fall 3s linear infinite;
+    position: absolute;
+}
+@keyframes fall{ 
+    0%{
+        opacity: 1;
+	background-color:#2f5;
+    }
+    30%{
+        background-color:#2f5;
+    }  
+    70%{
+        background-color:#05f;
+	opacity: 1;
+    }     
+    100%{
+	background-color:#05f;
+        top: 100vh;
+        opacity: 0;
+    }
+}

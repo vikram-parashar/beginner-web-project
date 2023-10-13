@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texhno Rain</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        function makeid(length) {
+            var result = '';
+            var characters = '0123456789';
+            var charactersLength = characters.length;
+            for (var i = 0; i < length; i++) {
+                result += characters.charAt(Math.floor(Math.random() * charactersLength));
+            }
+            return result;
+        }
+
+        setInterval(function () {
+            var line = document.createElement('span');          
+            var body = document.querySelector('body');
+            line.innerHTML = makeid(Math.random() * 5 + 10);
+            line.style.left = Math.random() * 100 + 'vw';
+            line.style.opacity = Math.random();
+            line.style.fontSize = Math.random() * 30 + 10 + 'px';
+            body.appendChild(line);
+            setTimeout(() => {
+                line.remove()
+            }, 10000);
+        },100)
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Fashion</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="previewTxt">Major Vicky</div>
+      <div id="settings">
+        <span class="label">Your Name :</span>
+        <input
+          type="text"
+          id="name"
+          oninput="changeTxt()"
+          placeholder="Type something cool..."
+          maxlength="15"
+        />
+        <span class="label">Font Size :</span>
+        <input
+          type="range"
+          id="size"
+          min="15"
+          max="50"
+          value="30"
+          oninput="changeSize()"
+        />
+        <span class="label">Text Color :</span><br>
+        <div id="txtColor">
+          
+          <div><span>Hue :</span><br>
+            <input
+              type="range"
+              oninput="changeTxtColor()"
+              id="hue"
+              max="255"
+              min="0"
+              value="0"
+            /></div>
+          <div><span>Saturation :</span
+            ><br><input
+              type="range"
+              id="saturation"
+              max="100"
+              min="0"
+              oninput="changeTxtColor()"
+              value="100"
+            /></div>
+          <div>
+            <span>lightnesss :</span
+              ><br><input
+                type="range"
+                id="lightness"
+                max="100"
+                min="0"
+                oninput="changeTxtColor()"
+                value="50"
+              />
+          </div>
+          
+        </div>
+        <span class="label">Background Color :</span>
+        <div id="bgColor">
+          
+          <span>Hue :</span
+          ><input
+            type="range"
+            oninput="changeBgColor()"
+            id="bgHue"
+            max="255"
+            min="0"
+            value="120"
+          />
+          <span>Saturation :</span
+          ><input
+            type="range"
+            id="bgSaturation"
+            max="100"
+            min="0"
+            oninput="changeBgColor()"
+            value="100"
+          />
+          <span>lightnesss :</span
+          ><input
+            type="range"
+            id="bgLightness"
+            max="100"
+            min="0"
+            oninput="changeBGColor()"
+            value="50"
+          />
+        </div>
+        
+        <span class="label">Shadow :</span>
+        <div class="shadow">
+          <span class="label">Shadow Horizontal Position :</span>
+          <input
+          type="range"
+          id="shadowX"
+          min="-10"
+          max="10"
+          value="0"
+          oninput="changeShadow()"
+        /><br>
+        <span class="label">Shadow Vertical Position :</span>
+        <input
+          type="range"
+          id="shadowY"
+          min="-10"
+          max="10"
+          value="0"
+          oninput="changeShadow()"
+        /><br>
+        <span class="label">Shadow Blur Radius :</span>
+        <input
+          type="range"
+          id="shadowBlur"
+          min="0"
+          max="5"
+          value="1"
+          oninput="changeShadow()"
+        /><br>
+        
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

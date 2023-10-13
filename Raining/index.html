@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raining</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script>
+        setInterval(function(){
+            var body = document.querySelector('body');
+            var drop = document.createElement('span');
+            drop.style.top = Math.random() * -10 + 'vh';
+            drop.style.left = Math.random() * 100 + 'vw';
+            drop.style.height = Math.random() * 40 + 5 + 'px';
+            drop.style.width = Math.random() * 3 + 'px';
+            body.appendChild(drop);
+            setTimeout(() => {
+                drop.remove();
+            }, 3000);           
+        }
+        ,1);
+	setInterval(function(){
+            var body = document.querySelector('body');
+            var drop = document.createElement('span');
+            drop.style.top = Math.random() * -10 + 'vh';
+            drop.style.left = Math.random() * 100 + 'vw';
+            drop.style.height = Math.random() * 40 + 5 + 'px';
+            drop.style.width = Math.random() * 3 + 'px';
+            body.appendChild(drop);
+            setTimeout(() => {
+                drop.remove();
+            }, 3000);           
+        }
+        ,1);
+    </script>
+</body>
+</html>

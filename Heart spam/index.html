@@ -1,0 +1,31 @@
+﻿<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Span</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script>
+        document.addEventListener("mousemove", function (e) {
+            var canva = document.querySelector('body');
+            var heart = document.createElement('span');
+            heart.classList.add('hearts')
+            heart.innerHTML = "♥";
+            var x = e.offsetX;
+            var y = e.offsetY;
+            heart.style.left = x + 'px';
+            heart.style.top = y + 'px';
+            canva.appendChild(heart);
+            var size = Math.random() * 8 + 2;
+            heart.style.fontSize = size + 'em';
+            setTimeout(() => {
+                heart.remove();
+            }, 1999);
+        })
+    </script>
+</body>
+
+</html>

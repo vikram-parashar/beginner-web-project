@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubbles</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+    <div class="pt">0</div>
+    <Span></Span>
+    <script>
+        var body = document.querySelector('body');
+        var pt = document.querySelector('.pt');
+        var mypts = 0;
+         setInterval(function () {
+            var drop = document.createElement('span');
+            var light  = document.createElement('span');
+            drop.style.transform = "scale(" + Math.random()+ ")";
+            drop.style.left = Math.random() * 100 + 'vw';
+            drop.style.animationDuration= Math.random() * 5 + 5 + "s";
+            var color = "rgba("+  Math.round(Math.random() * 200 + 55 ) +"," + Math.round(Math.random() * 200 + 55) + ","+Math.round(Math.random() * 200 + 55) +", 0.7)"
+            drop.style.boxShadow = "0 0 40px " + color;
+            body.appendChild(drop);
+            drop.appendChild(light);
+            light.style.boxShadow = "0 0 25px " + color;
+            light.style.backgroundColor = color;
+            setTimeout(() => {
+                drop.remove();
+            }, 10000);
+            drop.addEventListener("mouseover",function(){
+                drop.remove();
+                mypts += 1;
+                pt.innerHTML = mypts;
+            })
+        }, 200);    
+    </script>
+</body>
+
+</html>

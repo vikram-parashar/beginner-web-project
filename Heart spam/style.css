@@ -1,0 +1,24 @@
+body{
+    background-color: #000;
+    height:100vh;
+    overflow:hidden;
+}
+span{
+    color: #f4d;
+    font-size: 5em;
+    animation: fall 2s linear;
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+}
+@keyframes fall{
+    0%{
+        opacity: 1;
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        top: 0vh;
+        opacity: 0;
+        filter: hue-rotate(360deg);
+    }
+}

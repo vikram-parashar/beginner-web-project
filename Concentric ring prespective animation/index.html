@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prespective Rings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="animation">
+        <div class="container">
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+            <span style="--i:4;"></span>
+            <span style="--i:5;"></span>
+            <span style="--i:6;"></span>
+            <span style="--i:7;"></span>
+            <span style="--i:8;"></span>
+            <span style="--i:9;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:11"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+        </div>
+
+    </section>
+    <section id="playPause" onclick="playPause()">
+        Pause
+    </section>
+    <script>
+        //PlayPause
+        function playPause() {
+            var ringList = document.querySelectorAll('.container span');
+            var btn = document.getElementById('playPause')
+            var cr1 = 'rgb(255, 255, 0)';
+            var cr2 = 'rgb(255, 200, 0)';
+            if (btn.style.backgroundColor == cr1) {
+                for (let index = 0; index < ringList.length; index++) {
+                    const ring = ringList[index];
+                    ring.style.animationPlayState = 'paused';
+                }
+                btn.style.backgroundColor = cr2;
+                btn.innerHTML = 'Play';
+                
+            } else {
+                for (let index = 0; index < ringList.length; index++) {
+                    const ring = ringList[index];
+                    ring.style.animationPlayState = 'running';
+                }
+                btn.style.backgroundColor = cr1;
+                btn.innerHTML = 'Pause';
+            }
+
+        }
+    </script>
+</body>
+
+</html>

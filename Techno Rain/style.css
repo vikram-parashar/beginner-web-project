@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    height: 100vh;
+    overflow: hidden;
+}
+span{
+    color: #070;
+    display: block;
+    width: 2px;
+    word-wrap: break-word;
+    animation: fall 10s linear;
+    position: absolute;
+    bottom: 100vh;
+}
+@keyframes fall{
+    to{
+        bottom: -200vh;
+    }
+}

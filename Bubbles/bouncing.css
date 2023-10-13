@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #252525;
+    height: 100vh;
+    overflow: hidden;
+}
+
+span{
+    position: absolute;
+    top: -120px;
+    border-radius:50%;
+    width: 100px;
+    height: 100px;
+    display: block;
+    animation: bounce;
+    background-color:transparent;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+span span{
+    display: block;
+    width: 20%;
+    height: 20%;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    position: relative;
+    top: 20%;
+    left: 25%;
+}
+@keyframes bounce{ 
+   50%{
+       top:95vh;
+   }
+   55%{
+    top:100vh;
+   }
+   70%{
+    top:60vh;
+   }
+   100%{
+       top:calc(100vh + 100px);
+   }
+}

@@ -1,0 +1,28 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubbles</title>
+    <link rel="stylesheet" href="bouncing.css">
+</head>
+
+<body>
+    <script>
+        var body = document.querySelector("body");
+         setInterval(function () {
+            var drop = document.createElement('span');
+            var light  = document.createElement('span');
+            drop.style.transform = "scale(" + Math.random()+ ")";
+            drop.style.left = Math.random() * 100 + 'vw';
+            drop.style.animationDuration= Math.random() * 5 + 5 + "s";
+            body.appendChild(drop);
+            drop.appendChild(light);
+            setTimeout(() => {
+                drop.remove();
+            }, 10000);
+        }, 200);    
+    </script>
+</body>
+
+</html>
